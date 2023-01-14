@@ -1,23 +1,18 @@
-import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
-import React from 'react';
-import { HashLoader } from 'react-spinners';
+/* eslint-disable import/no-extraneous-dependencies */
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchGreeting } from '../Redux/messeges';
 
 export default function Greeting() {
-  const { data, isLoading } = useQuery(
-    ['getGreetings'],
-    async () => {
-      const res = await axios.get('http://127.0.0.1:3000');
-      return res.data;
-    },
-  );
-  if (isLoading) {
-    return <HashLoader color="lightblue" />;
-  }
-  const random = Math.floor(Math.random() * data.length);
+  const dispatch = useDispatch();
+  const greetings = useSelector((state) => state.greetings.greeting);
+  useEffect(() => {
+    dispatch(fetchGreeting());
+  }, []);
+
   return (
     <div className="line-1 anim-typewriter">
-      {data[random].greet}
+      {greetings.greet}
     </div>
   );
 }
