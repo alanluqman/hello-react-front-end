@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import './App.css';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';

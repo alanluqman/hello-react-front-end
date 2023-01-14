@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import greetingsReducer from './messeges';
 

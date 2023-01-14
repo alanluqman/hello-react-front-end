@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const API_URL = 'http://127.0.0.1:3000';
