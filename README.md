@@ -137,7 +137,8 @@ coming soon...
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
+- Generate new Greeting button
+- Add loading spinner
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
